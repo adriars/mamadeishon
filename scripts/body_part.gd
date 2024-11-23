@@ -19,12 +19,11 @@ func _init(name: String) -> void:
 func traing(training : int) -> void:
 	if training == 0:
 		soft_training.training(self)
-	if training == 1:
+	elif training == 1:
 		mid_training.training(self)
-	if training == 2:
+	elif training == 2:
 		hard_training.training(self)		
 
-	
 
 func add_soreness(soreness : int) -> void:
 	self.rested = false 
@@ -32,8 +31,13 @@ func add_soreness(soreness : int) -> void:
 
 func add_codition(ammount : int) -> void:
 	self.rested = false
-	self.condition += ammount
-
+	if self.soreness < 3:
+		self.condition += ammount * 2
+	elif self.soreness <= 5:
+		self.condition += -ammount **2 + 7*ammount -5 
+	elif self.soreness > 5:
+		self.condition += -ammount +10 
+		
 func add_fat(ammount : int) -> void:
 	self.fat += ammount
 
@@ -45,6 +49,7 @@ class Training:
 	var soreness:int = 0;
 	var fat:int = 0;
 	var energy:int = 0;
+	var level:int = 0;
 	
 	func _init(condition:int, soreness:int, fat:int, energy:int):
 		self.condition = condition
@@ -57,6 +62,7 @@ class Training:
 			self.condition += 10
 			self.fat += 5
 			self.energy -= 3
+			self.level += 1
 		else:
 			print("no money bicth")
 	
