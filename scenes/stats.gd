@@ -6,6 +6,6 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	$VBoxContainer/Label.text = "Money: " + str(GymBro.money) + "\nEnergy: " + str(GymBro.energy) + "\nArm condition: " + str(GymBro.arm_condition) + "\nLeg condition: " + str(GymBro.legs_condition) + "\nBack condition: " + str(GymBro.back_condition) + "\nBooty condition: " + str(GymBro.booty_condition) + "\nPecs condition: " + str(GymBro.pecs_condition)
+func _physics_process(delta: float) -> void:
+	$VBoxContainer/Label.text = "Money: " + str(GymBro.money) + "\nEnergy: " + str(GymBro.energy) + "\nArm condition: " + str(GymBro.arms.condition) + "\nLeg condition: " + str(GymBro.legs.condition) + "\nBack condition: " + str(GymBro.back.condition) + "\nBooty condition: " + str(GymBro.booty.condition) + "\nPecs condition: " + str(GymBro.pecs.condition)
 	pass
