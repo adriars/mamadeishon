@@ -16,3 +16,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func print_all() -> void:
+	print(self.arm_condition)
+	print(self.back_condition)
+	print(self.legs_condition)
+	print(self.booty_condition)
+	print(self.pecs_condition)
+	print(self.money)
+	print(self.energy)
+	print(self.soreness)
+	
