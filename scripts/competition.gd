@@ -3,7 +3,7 @@ extends Node
 class_name Competition
 
 
-class olympia(Competition):
+class olympia():
 	var test:int=0;
 
 
