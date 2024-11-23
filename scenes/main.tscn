@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://r6jtcv7jekjr"]
+
+[ext_resource type="PackedScene" uid="uid://djjdc3rtrkkrh" path="res://prefabs/gym_bro/gym_bro.tscn" id="1_8vome"]
+
+[node name="Main" type="Node3D"]
+
+[node name="GymBro" parent="." instance=ExtResource("1_8vome")]
