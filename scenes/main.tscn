@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://r6jtcv7jekjr"]
+[gd_scene load_steps=9 format=3 uid="uid://r6jtcv7jekjr"]
 
+[ext_resource type="Script" path="res://scenes/main_camera.gd" id="1_0vrj2"]
 [ext_resource type="PackedScene" uid="uid://dln885hpaf6kj" path="res://scenes/Shop.tscn" id="1_sxhah"]
 [ext_resource type="PackedScene" uid="uid://djumd75k74wpe" path="res://scenes/stats.tscn" id="2_mntba"]
+[ext_resource type="PackedScene" uid="uid://bf4yfagx3j8ig" path="res://scenes/gym.tscn" id="3_2g2yq"]
+[ext_resource type="PackedScene" uid="uid://clof8jyh04t01" path="res://scenes/machine.tscn" id="5_ujqk6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_42oli"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -24,16 +27,15 @@ environment = SubResource("Environment_dauq5")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Floor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-size = Vector3(100, 1, 100)
-
-[node name="MainCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 10, 0)
-
 [node name="Shop" parent="." instance=ExtResource("1_sxhah")]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00923181)
-
 [node name="Stats" parent="." instance=ExtResource("2_mntba")]
+
+[node name="Gym" parent="." instance=ExtResource("3_2g2yq")]
+
+[node name="Machine" parent="." instance=ExtResource("5_ujqk6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1941, 13.7251, -2.20778)
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 80, 0)
+script = ExtResource("1_0vrj2")
