@@ -30,6 +30,9 @@ func _input(event):
 		var queryParameters = PhysicsRayQueryParameters3D.create(start, end)
 		var result = worldspace.intersect_ray(queryParameters)
 		print(result)
+		if result:
+			if result.collider.has_method("show_menu"):
+				result.collider.show_menu()
 		
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			position.y -= 4
