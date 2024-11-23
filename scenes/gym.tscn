@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf4yfagx3j8ig"]
-
-[sub_resource type="GDScript" id="GDScript_yv1li"]
+[gd_scene format=3 uid="uid://bf4yfagx3j8ig"]
 
 [node name="Gym" type="Node3D"]
 
@@ -17,9 +15,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212303, -0.0974007, -0.121
 
 [node name="quadri8" type="CSGBox3D" parent="machines"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1805, 6.34418, -5.82327)
-use_collision = true
 size = Vector3(8.60632, 13.6884, 9.82568)
-script = SubResource("GDScript_yv1li")
 
 [node name="quadri9" type="CSGBox3D" parent="machines"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2461, 6.38778, -6.0421)

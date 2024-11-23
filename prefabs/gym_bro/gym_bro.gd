@@ -1,7 +1,9 @@
 extends Node3D
 
+
 var money: int = 100
 var energy: int = 0
+var fat: int = 0
 var soreness: int = 0
 var arms: BodyPart = BodyPart.new("Arms")
 var back: BodyPart = BodyPart.new("Back")
