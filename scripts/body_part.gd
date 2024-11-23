@@ -1,9 +1,9 @@
 class_name BodyPart
 
 var name: String
-var condition : int = 0;
-var soreness : int = 0;
-var fat : int = 0;
+var condition : float = 0;
+var soreness : float = 0;
+var fat : float = 0;
 var rested : bool = false;
 
 func _init(name: String) -> void:
