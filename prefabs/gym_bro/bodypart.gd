@@ -13,7 +13,8 @@ func add_soreness(soreness) -> void:
 
 func add_codition(plus) -> void:
 	self.rested = false
-	
+
+
 	self.condition += plus
 
 func add_fat(plus) -> void:

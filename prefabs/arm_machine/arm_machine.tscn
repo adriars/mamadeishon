@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://clof8jyh04t01"]
+
+[ext_resource type="Script" path="res://prefabs/arm_machine/arm_machine.gd" id="1_o3ml7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_uunkd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x1r8q"]
+
+[node name="ArmMachine" type="StaticBody3D"]
+script = ExtResource("1_o3ml7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_uunkd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_x1r8q")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
+layout_mode = 2
+
+[node name="Biceps" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Biceps
+Energy: 15
+Conditioning: 2"
+
+[node name="Close" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Close"
+
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Biceps" to="." method="_on_biceps_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Close" to="." method="_on_close_pressed"]

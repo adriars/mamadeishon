@@ -26,6 +26,7 @@ class Arm_exercise extends Exercise:
 			GymBro.arm_condition = GymBro.arm_condition + self.conditioning
 			GymBro.soreness = GymBro.soreness + self.soreness
 			GymBro.energy = GymBro.energy - self.energy
+			
 
 class Back_exercise extends Exercise:
 	func do_exercise() -> void:

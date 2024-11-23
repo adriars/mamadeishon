@@ -9,21 +9,22 @@ class Food:
 	var food: String
 	var price: int
 	var energy: int	
+	var fat:int
 
-	func _init(food: String, price: int, energy: int) -> void:
+	func _init(food: String, price: int, energy: int, fat: int) -> void:
 		self.food = food
 		self.price = price
 		self.energy = energy
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	hamburger = Food.new("Hamburger", 5, 20)
+	hamburger = Food.new("Hamburger", 5, 20,30)
 	$VBoxContainer/GridContainer/Hamburger.text = hamburger.food + "\nPrice: " + str(hamburger.price) + "\nEnergy: " + str(hamburger.energy)
-	pre_workout = Food.new("Pre Workout", 20, 40)
+	pre_workout = Food.new("Pre Workout", 20, 40, 0)
 	$VBoxContainer/GridContainer/PreWorkout.text = pre_workout.food + "\nPrice: " + str(pre_workout.price) + "\nEnergy: " + str(pre_workout.energy)
-	protein_shake = Food.new("Protein Shake", 100, 100)
+	protein_shake = Food.new("Protein Shake", 100, 100, 0)
 	$VBoxContainer/GridContainer/ProteinShake.text = protein_shake.food + "\nPrice: " + str(protein_shake.price) + "\nEnergy: " + str(protein_shake.energy)
-	chicken_rice = Food.new("Chicken rice", 30, 60)
+	chicken_rice = Food.new("Chicken rice", 30, 60, 10)
 	$VBoxContainer/GridContainer/ChickenRice.text = chicken_rice.food + "\nPrice: " + str(chicken_rice.price) + "\nEnergy: " + str(chicken_rice.energy)
 	$VBoxContainer/CenterContainer/HBoxContainer/Money.text = "Money: " + str(GymBro.money)
 	$VBoxContainer/CenterContainer/HBoxContainer/Energy.text = "Energy: " + str(GymBro.energy)
@@ -37,6 +38,7 @@ func eat(food: Food) -> void:
 	if GymBro.money >= food.price:
 		GymBro.money = GymBro.money - food.price
 		GymBro.energy = GymBro.energy + food.energy
+		GymBro.fat = GymBro.fat + food.fat
 		$VBoxContainer/CenterContainer/HBoxContainer/Money.text = "Money: " + str(GymBro.money)
 		$VBoxContainer/CenterContainer/HBoxContainer/Energy.text = "Energy: " + str(GymBro.energy)
 

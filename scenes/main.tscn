@@ -1,7 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://ifn0upxjntem"]
 
 [ext_resource type="PackedScene" path="res://scenes/Shop.tscn" id="1_sxhah"]
+[gd_scene load_steps=9 format=3 uid="uid://r6jtcv7jekjr"]
+
+[ext_resource type="Script" path="res://scenes/main_camera.gd" id="1_7r2y0"]
+[ext_resource type="PackedScene" uid="uid://dln885hpaf6kj" path="res://scenes/Shop.tscn" id="1_sxhah"]
+
 [ext_resource type="PackedScene" uid="uid://djumd75k74wpe" path="res://scenes/stats.tscn" id="2_mntba"]
+[ext_resource type="PackedScene" uid="uid://b1m6qm3vb531s" path="res://prefabs/back_machine/back_machine.tscn" id="4_dlnsc"]
+[ext_resource type="PackedScene" uid="uid://clof8jyh04t01" path="res://prefabs/arm_machine/arm_machine.tscn" id="5_nib84"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_42oli"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -29,7 +36,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 size = Vector3(100, 1, 100)
 
 [node name="MainCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 10, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 60, 0)
+script = ExtResource("1_7r2y0")
 
 [node name="Shop" parent="." instance=ExtResource("1_sxhah")]
 
@@ -37,3 +45,9 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 10, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00923181)
 
 [node name="Stats" parent="." instance=ExtResource("2_mntba")]
+
+[node name="BackMachine" parent="." instance=ExtResource("4_dlnsc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.81447, 0, 8.7851)
+
+[node name="ArmMachine" parent="." instance=ExtResource("5_nib84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.59113, 0, -8.02688)
