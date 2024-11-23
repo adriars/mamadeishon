@@ -1,7 +1,11 @@
+[gd_scene load_steps=6 format=3 uid="uid://ifn0upxjntem"]
+
+[ext_resource type="PackedScene" path="res://scenes/Shop.tscn" id="1_sxhah"]
 [gd_scene load_steps=9 format=3 uid="uid://r6jtcv7jekjr"]
 
 [ext_resource type="Script" path="res://scenes/main_camera.gd" id="1_7r2y0"]
 [ext_resource type="PackedScene" uid="uid://dln885hpaf6kj" path="res://scenes/Shop.tscn" id="1_sxhah"]
+
 [ext_resource type="PackedScene" uid="uid://djumd75k74wpe" path="res://scenes/stats.tscn" id="2_mntba"]
 [ext_resource type="PackedScene" uid="uid://b1m6qm3vb531s" path="res://prefabs/back_machine/back_machine.tscn" id="4_dlnsc"]
 [ext_resource type="PackedScene" uid="uid://clof8jyh04t01" path="res://prefabs/arm_machine/arm_machine.tscn" id="5_nib84"]

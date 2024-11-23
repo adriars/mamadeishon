@@ -9,6 +9,10 @@ var soft_training : Training = Training.new(4,20,0.5,15);
 var mid_training : Training = Training.new(4,20,0.5,35);
 var hard_training : Training = Training.new(4,20,0.5,70);
 
+var soft_training : Training = Training.new(4,20,0.5,15);
+var mid_training : Training = Training.new(4,20,0.5,35);
+var hard_training : Training = Training.new(4,20,0.5,70);
+
 func _init(name: String) -> void:
 	name = name
 	condition = 0
@@ -68,7 +72,8 @@ class Training:
 	
 	func training(bodypart : BodyPart):
 		if GymBro.energy > self.energy:
-			GymBro.energy -= self.energy * energy
+			GymBro.energy -= self.energy
+
 			bodypart.add_codition(self.condition)
 			bodypart.add_soreness(self.soreness)
 			bodypart.add_fat(-self.fat)

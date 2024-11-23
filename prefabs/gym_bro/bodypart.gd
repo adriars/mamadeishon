@@ -13,10 +13,8 @@ func add_soreness(soreness) -> void:
 
 func add_codition(plus) -> void:
 	self.rested = false
-<<<<<<< HEAD
-=======
-	
->>>>>>> 48789da307a294cbe8aefb0a9038ee59bc3f5b85
+
+
 	self.condition += plus
 
 func add_fat(plus) -> void:
@@ -29,10 +27,6 @@ func rest() -> void:
 func _ready() -> void:
 	pass # Replace with function body.
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 48789da307a294cbe8aefb0a9038ee59bc3f5b85
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
