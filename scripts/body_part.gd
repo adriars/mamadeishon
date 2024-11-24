@@ -1,6 +1,6 @@
 class_name BodyPart
 
-var name: String
+var exercise_name: String
 var condition : int = 0;
 var soreness : int = 0;
 var fat : int = 0;
@@ -10,8 +10,8 @@ var mid_training : Training = Training.new(4,20,0.5,35);
 var hard_training : Training = Training.new(4,20,0.5,70);
 
 
-func _init(name: String) -> void:
-	name = name
+func _init(exercise_name: String) -> void:
+	exercise_name = exercise_name
 	condition = 0
 	soreness = 0
 	fat = 0

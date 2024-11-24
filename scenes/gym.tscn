@@ -15,9 +15,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 size = Vector3(100, 1, 100)
 script = ExtResource("1_mxxga")
 
-[node name="Entrada" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4135, 6.34418, -23.2245)
-size = Vector3(1, 13.6884, 9.23438)
+[node name="Paret entrada" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -50.5147, 14.4576, 0)
+size = Vector3(30, 1, 100)
+script = ExtResource("1_mxxga")
+
+[node name="Paret fondo" type="CSGBox3D" parent="."]
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 0.0345993, 14.4223, -50.5895)
+size = Vector3(30, 1, 100)
+script = ExtResource("1_mxxga")
 
 [node name="machines" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212303, -0.0974007, -0.121502)
@@ -41,3 +47,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.30619, -0.0687446, 7.22859
 stream = ExtResource("7_gt1kl")
 volume_db = 22.456
 autoplay = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.702886, 0, 0.711303, 0, 1, 0, -0.711303, 0, 0.702886, 49.9826, 11.4631, 49.9901)
+
+[node name="Lights" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0, 1, 0, 4.37114e-08, 0, 1, 1, 0, -4.37114e-08, 1.4201, 57.556, -11.4266)
+light_angular_distance = 30.0
