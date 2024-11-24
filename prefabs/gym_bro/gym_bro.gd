@@ -5,11 +5,11 @@ var money: int = 100
 var energy: int = 0
 var fat: int = 0
 var soreness: int = 0
-#var arms: BodyPart = BodyPart.new("Arms")
-#var back: BodyPart = BodyPart.new("Back")
-#var legs: BodyPart = BodyPart.new("Legs")
-#var booty: BodyPart = BodyPart.new("Booty")
-#var pecs: BodyPart = BodyPart.new("Pecs")
+var arms: BodyPart = BodyPart.new("Arms")
+var back: BodyPart = BodyPart.new("Back")
+var legs: BodyPart = BodyPart.new("Legs")
+var booty: BodyPart = BodyPart.new("Booty")
+var pecs: BodyPart = BodyPart.new("Pecs")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -8,7 +8,7 @@ func _on_close_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_back_pressed() -> void:
-	GymBro.back.training()
+	#GymBro.back.training()
 	if GymBro.energy >= 25:
 		GymBro.back.condition += 4
 		GymBro.back.soreness += 15

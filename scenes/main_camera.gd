@@ -13,14 +13,6 @@ var camLerpSpeed : float = 16.0
 var _curZoom : float = maxZoom
 
 func _input(event):
-	if event is InputEventMouseMotion:
-		# rotate the rig around the target
-		rotation.y -= event.relative.x * horizontalSensitivity
-		rotation.y = wrapf(rotation.y,0.0,TAU)
-		
-		rotation.x -= event.relative.y * verticalSensitivity
-		rotation.x = clamp(rotation.x, deg_to_rad(minPitchDeg), deg_to_rad(maxPitchDeg))
-	
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
 		print("Mouse Click/Unclick at: ", event.position)
@@ -34,15 +26,6 @@ func _input(event):
 			if result.collider.has_method("show_menu"):
 				result.collider.show_menu()
 		
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			position.y -= 4
-		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			position.y += 4
-		
 	if event is InputEventKey:
 		if event.keycode == KEY_ESCAPE:
 			get_tree().quit()
-		if event.keycode == KEY_Q:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		if event.keycode == KEY_E:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

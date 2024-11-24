@@ -26,8 +26,6 @@ func _ready() -> void:
 	$VBoxContainer/GridContainer/ProteinShake.text = protein_shake.food + "\nPrice: " + str(protein_shake.price) + "\nEnergy: " + str(protein_shake.energy)
 	chicken_rice = Food.new("Chicken rice", 30, 60, 10)
 	$VBoxContainer/GridContainer/ChickenRice.text = chicken_rice.food + "\nPrice: " + str(chicken_rice.price) + "\nEnergy: " + str(chicken_rice.energy)
-	$VBoxContainer/CenterContainer/HBoxContainer/Money.text = "Money: " + str(GymBro.money)
-	$VBoxContainer/CenterContainer/HBoxContainer/Energy.text = "Energy: " + str(GymBro.energy)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,8 +37,6 @@ func eat(food: Food) -> void:
 		GymBro.money = GymBro.money - food.price
 		GymBro.energy = GymBro.energy + food.energy
 		GymBro.fat = GymBro.fat + food.fat
-		$VBoxContainer/CenterContainer/HBoxContainer/Money.text = "Money: " + str(GymBro.money)
-		$VBoxContainer/CenterContainer/HBoxContainer/Energy.text = "Energy: " + str(GymBro.energy)
 
 func _on_hamburger_pressed() -> void:
 	eat(hamburger)

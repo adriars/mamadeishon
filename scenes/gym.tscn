@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bf4yfagx3j8ig"]
+[gd_scene load_steps=17 format=3 uid="uid://bf4yfagx3j8ig"]
 
 [ext_resource type="Material" uid="uid://6bupf22q674l" path="res://materials/Floor.tres" id="1_40t2g"]
 [ext_resource type="Script" path="res://scripts/musica.gd" id="1_mxxga"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dj22ydg0l2s63" path="res://prefabs/leg_machine/leg_machine.tscn" id="7_b5v21"]
 [ext_resource type="AudioStream" uid="uid://btfh40o52px8g" path="res://audio/Temarron gymbros.mp3" id="7_gt1kl"]
 [ext_resource type="Script" path="res://scenes/main_camera.gd" id="9_6o0aa"]
+[ext_resource type="PackedScene" uid="uid://dln885hpaf6kj" path="res://scenes/Shop.tscn" id="12_31gjg"]
+[ext_resource type="PackedScene" uid="uid://djumd75k74wpe" path="res://scenes/stats.tscn" id="13_f337m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rabrb"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -100,3 +102,7 @@ projection = 1
 fov = 39.3
 size = 46.723
 script = ExtResource("9_6o0aa")
+
+[node name="Shop" parent="." instance=ExtResource("12_31gjg")]
+
+[node name="Stats" parent="." instance=ExtResource("13_f337m")]

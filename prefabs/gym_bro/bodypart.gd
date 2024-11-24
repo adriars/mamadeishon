@@ -1,6 +1,6 @@
 extends Node
 
-class_name BodyPart
+class_name BodyPart2
 
 var soreness : int = 0;
 var condition : int = 0;

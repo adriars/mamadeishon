@@ -7,5 +7,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	$VBoxContainer/Label.text = "Money: " + str(GymBro.money) + "\nEnergy: " + str(GymBro.energy) + "\nArm condition: " + str(GymBro.arms.condition) + "\nLeg condition: " + str(GymBro.legs.condition) + "\nBack condition: " + str(GymBro.back.condition) + "\nBooty condition: " + str(GymBro.booty.condition) + "\nPecs condition: " + str(GymBro.pecs.condition)
+	$VBoxContainer/Label.text = "Money: " + str(GymBro.money) + "\nEnergy: " + str(GymBro.energy) + "\nArm condition: " + str(GymBro.arms.condition) + "\nLeg condition: " + str(GymBro.legs.condition) + "\nBack condition: " + str(GymBro.back.condition) + "\nBooty condition: " + str(GymBro.booty.condition) + "\nHead condition: " + str(GymBro.pecs.condition)
 	pass

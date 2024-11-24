@@ -40,7 +40,7 @@ layout_mode = 2
 
 [node name="Biceps" type="Button" parent="Control/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Biceps
+text = "Arms
 Energy: 15
 Conditioning: 2"
 

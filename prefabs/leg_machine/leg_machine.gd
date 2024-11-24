@@ -8,9 +8,9 @@ func _on_close_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_leg_pressed() -> void:
-	GymBro.leg.training()
+	#GymBro.leg.training()
 	if GymBro.energy >= 25:
-		GymBro.leg.condition += 4
-		GymBro.leg.soreness += 15
+		GymBro.legs.condition += 4
+		GymBro.legs.soreness += 15
 		GymBro.energy -= 25
 	pass # Replace with function body.
