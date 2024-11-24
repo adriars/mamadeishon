@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2aajxqaewk0s"]
+[gd_scene load_steps=5 format=3 uid="uid://d2aajxqaewk0s"]
 
 [ext_resource type="PackedScene" uid="uid://um1ei67l6xit" path="res://glbs/Personatge_Mamadissim.gltf" id="1_ob1qq"]
 [ext_resource type="Material" uid="uid://dov5ywyn83ryd" path="res://materials/Skin.tres" id="2_s5qsb"]
 [ext_resource type="Material" uid="uid://bcg16uflli44i" path="res://materials/Pantakas.tres" id="3_u4rxh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dkvpg"]
+size = Vector3(3.95532, 9.24994, 1.6897)
 
 [node name="Personatge_Mamadissim" instance=ExtResource("1_ob1qq")]
 
@@ -26,3 +29,9 @@ material_override = ExtResource("2_s5qsb")
 
 [node name="Leg_R_Mamadissim" parent="Body_Mamadissim" index="5"]
 material_override = ExtResource("2_s5qsb")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.62198, 0)
+shape = SubResource("BoxShape3D_dkvpg")
