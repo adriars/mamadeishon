@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://mhhb8d36ppcy"]
+
+[ext_resource type="PackedScene" uid="uid://c53dhqj5q1o60" path="res://glbs/mamadissim_dobleBiceps.gltf" id="1_05fsd"]
+[ext_resource type="Material" uid="uid://dov5ywyn83ryd" path="res://materials/Skin.tres" id="2_7f3w8"]
+[ext_resource type="Material" uid="uid://bcg16uflli44i" path="res://materials/Pantakas.tres" id="3_dw3mp"]
+
+[node name="mamadissim_dobleBiceps" instance=ExtResource("1_05fsd")]
+
+[node name="Body_Mamadissim_001" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.049017, 5.2286, 0)
+material_override = ExtResource("2_7f3w8")
+
+[node name="Arm_R_Mamadissim_001" parent="Body_Mamadissim_001" index="0"]
+material_override = ExtResource("2_7f3w8")
+
+[node name="Arm_R_Mamadissim_002" parent="Body_Mamadissim_001" index="1"]
+material_override = ExtResource("2_7f3w8")
+
+[node name="Booty_Mamadissim_001" parent="Body_Mamadissim_001" index="2"]
+material_override = ExtResource("3_dw3mp")
+
+[node name="Head_Mamadissim_001" parent="Body_Mamadissim_001" index="3"]
+material_override = ExtResource("2_7f3w8")
+
+[node name="Leg_L_Mamadissim_001" parent="Body_Mamadissim_001" index="4"]
+material_override = ExtResource("2_7f3w8")
+
+[node name="Leg_R_Mamadissim_001" parent="Body_Mamadissim_001" index="5"]
+material_override = ExtResource("2_7f3w8")
