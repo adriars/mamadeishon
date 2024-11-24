@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbnp58n474ris"]
+
+[ext_resource type="PackedScene" uid="uid://cybkeef0olxaq" path="res://glbs/Personatge_Flacucho.gltf" id="1_elpok"]
+[ext_resource type="Material" uid="uid://dov5ywyn83ryd" path="res://materials/Skin.tres" id="2_o8n34"]
+[ext_resource type="Material" uid="uid://bcg16uflli44i" path="res://materials/Pantakas.tres" id="3_dgkwq"]
+
+[node name="Personatge_Flacucho" instance=ExtResource("1_elpok")]
+
+[node name="Body_Flacucho" parent="." index="0"]
+material_override = ExtResource("2_o8n34")
+
+[node name="Arm_L_Flacucho" parent="Body_Flacucho" index="0"]
+material_override = ExtResource("2_o8n34")
+
+[node name="Arm_R_Flacucho" parent="Body_Flacucho" index="1"]
+material_override = ExtResource("2_o8n34")
+
+[node name="Booty_Flacucho" parent="Body_Flacucho" index="2"]
+material_override = ExtResource("3_dgkwq")
+
+[node name="Head_Flacucho" parent="Body_Flacucho" index="3"]
+material_override = ExtResource("2_o8n34")
+
+[node name="Leg_L_Flacucho" parent="Body_Flacucho" index="4"]
+material_override = ExtResource("2_o8n34")
+
+[node name="Leg_R_Flacucho" parent="Body_Flacucho" index="5"]
+material_override = ExtResource("2_o8n34")

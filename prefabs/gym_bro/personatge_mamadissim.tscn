@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2aajxqaewk0s"]
+
+[ext_resource type="PackedScene" uid="uid://um1ei67l6xit" path="res://glbs/Personatge_Mamadissim.gltf" id="1_ob1qq"]
+[ext_resource type="Material" uid="uid://dov5ywyn83ryd" path="res://materials/Skin.tres" id="2_s5qsb"]
+[ext_resource type="Material" uid="uid://bcg16uflli44i" path="res://materials/Pantakas.tres" id="3_u4rxh"]
+
+[node name="Personatge_Mamadissim" instance=ExtResource("1_ob1qq")]
+
+[node name="Body_Mamadissim" parent="." index="0"]
+material_override = ExtResource("2_s5qsb")
+
+[node name="Arm_L_Mamadissim" parent="Body_Mamadissim" index="0"]
+material_override = ExtResource("2_s5qsb")
+
+[node name="Arm_R_Mamadissim" parent="Body_Mamadissim" index="1"]
+material_override = ExtResource("2_s5qsb")
+
+[node name="Booty_Mamadissim" parent="Body_Mamadissim" index="2"]
+material_override = ExtResource("3_u4rxh")
+
+[node name="Head_Mamadissim" parent="Body_Mamadissim" index="3"]
+material_override = ExtResource("2_s5qsb")
+
+[node name="Leg_L_Mamadissim" parent="Body_Mamadissim" index="4"]
+material_override = ExtResource("2_s5qsb")
+
+[node name="Leg_R_Mamadissim" parent="Body_Mamadissim" index="5"]
+material_override = ExtResource("2_s5qsb")
