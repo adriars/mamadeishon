@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://rcg4jrojjogy"]
+
+[ext_resource type="PackedScene" uid="uid://mtb43mcmmoq2" path="res://prefabs/booty_machine/booty_machine.tscn" id="2_n26gb"]
+[ext_resource type="PackedScene" uid="uid://b1m6qm3vb531s" path="res://prefabs/back_machine/back_machine.tscn" id="3_owftb"]
+[ext_resource type="PackedScene" uid="uid://clof8jyh04t01" path="res://prefabs/arm_machine/arm_machine.tscn" id="4_r12id"]
+[ext_resource type="PackedScene" path="res://mamadissim_doble_biceps.tscn" id="5_ltg0l"]
+[ext_resource type="PackedScene" uid="uid://csuqypb0p2u8r" path="res://prefabs/head_machine/head_machine.tscn" id="5_vc7a3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4hyck"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_te05v"]
+sky_material = SubResource("ProceduralSkyMaterial_4hyck")
+
+[sub_resource type="Environment" id="Environment_6pkmo"]
+background_mode = 2
+sky = SubResource("Sky_te05v")
+tonemap_mode = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_csvup"]
+font_size = 100
+font_color = Color(1, 0, 0, 1)
+
+[node name="Final" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6pkmo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 15)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -276.0
+offset_right = -276.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 2
+offset_right = 565.0
+offset_bottom = 137.0
+text = "Mr Olympia"
+label_settings = SubResource("LabelSettings_csvup")
+
+[node name="BootyMachine" parent="." instance=ExtResource("2_n26gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2381, 0, -6.9381)
+
+[node name="BackMachine" parent="." instance=ExtResource("3_owftb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9985, 0, -0.548189)
+
+[node name="ArmMachine" parent="." instance=ExtResource("4_r12id")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.99038, 0, -7.9973)
+
+[node name="HeadMachine" parent="." instance=ExtResource("5_vc7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97048, 0, -20.4517)
+
+[node name="mamadissim_dobleBiceps" parent="." instance=ExtResource("5_ltg0l")]
