@@ -19,6 +19,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
+func _physics_process(delta: float) -> void:
+	if arms.condition >= 10 and legs.condition >= 10 and back.condition >= 10 and booty.condition >= 10 and pecs.condition >= 10:
+		get_tree().change_scene_to_file("res://scenes/final.tscn")
+	
 func print_all() -> void:
 	print(self.arm_condition)
 	print(self.back_condition)
