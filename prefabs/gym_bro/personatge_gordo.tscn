@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxrlqxmhua6nw"]
+
+[ext_resource type="PackedScene" uid="uid://op5akhrg3r4b" path="res://glbs/Personatge_Gordo.gltf" id="1_r63qd"]
+[ext_resource type="Material" uid="uid://dov5ywyn83ryd" path="res://materials/Skin.tres" id="2_ixlqm"]
+[ext_resource type="Material" uid="uid://bcg16uflli44i" path="res://materials/Pantakas.tres" id="3_ie8pu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_il5sd"]
+size = Vector3(3.20093, 9.24994, 1.98645)
+
+[node name="Personatge_Gordo" instance=ExtResource("1_r63qd")]
+
+[node name="Body_Gordo" parent="." index="0"]
+material_override = ExtResource("2_ixlqm")
+
+[node name="Arm_L_Gordo" parent="Body_Gordo" index="0"]
+material_override = ExtResource("2_ixlqm")
+
+[node name="Arm_R_Gordo" parent="Body_Gordo" index="1"]
+material_override = ExtResource("2_ixlqm")
+
+[node name="Booty_Gordo" parent="Body_Gordo" index="2"]
+material_override = ExtResource("3_ie8pu")
+
+[node name="Head_Gordo" parent="Body_Gordo" index="3"]
+material_override = ExtResource("2_ixlqm")
+
+[node name="Leg_L_Gordo" parent="Body_Gordo" index="4"]
+material_override = ExtResource("2_ixlqm")
+
+[node name="Leg_R_Gordo" parent="Body_Gordo" index="5"]
+material_override = ExtResource("2_ixlqm")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.62198, 0.148376)
+shape = SubResource("BoxShape3D_il5sd")
