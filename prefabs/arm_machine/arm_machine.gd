@@ -9,8 +9,8 @@ func _on_close_pressed() -> void:
 
 func _on_biceps_pressed() -> void:
 	if GymBro.energy >= 15:
-		GymBro.arms.condition += 5 - GymBro.arms.soreness
-		GymBro.arms.soreness += 0.5
+		GymBro.arms.condition += 5 - (GymBro.arms.soreness)
+		GymBro.arms.soreness += 1
 		GymBro.energy -= 15
 		$"../../AudioExit".play()
 	else:
