@@ -43,6 +43,11 @@ func eat(food: Food) -> void:
 
 func _on_hamburger_pressed() -> void:
 	eat(hamburger)
+	GymBro.arms.condition -= 1
+	GymBro.legs.condition -= 1
+	GymBro.pecs.condition -= 1
+	GymBro.booty.condition -= 1
+	GymBro.back.condition -= 1
 	pass # Replace with function body.
 
 
