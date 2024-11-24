@@ -37,6 +37,9 @@ func eat(food: Food) -> void:
 		GymBro.money = GymBro.money - food.price
 		GymBro.energy = GymBro.energy + food.energy
 		GymBro.fat = GymBro.fat + food.fat
+		$AudioCash.play()
+	else:
+		$"../../AudioFail".play()
 
 func _on_hamburger_pressed() -> void:
 	eat(hamburger)

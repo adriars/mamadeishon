@@ -31,6 +31,8 @@ layout_mode = 2
 [node name="ChickenRice" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 
+[node name="AudioCash" type="AudioStreamPlayer3D" parent="."]
+
 [connection signal="pressed" from="VBoxContainer/GridContainer/Hamburger" to="." method="_on_hamburger_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/PreWorkout" to="." method="_on_pre_workout_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/ProteinShake" to="." method="_on_protein_shake_pressed"]
