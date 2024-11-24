@@ -1,8 +1,8 @@
 extends Node3D
 
 
-var money: int = 100
-var energy: int = 0
+var money: int = 50
+var energy: int = 100
 var fat: int = 0
 var soreness: int = 0
 var arms: BodyPart = BodyPart.new("Arms")

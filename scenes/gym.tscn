@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bf4yfagx3j8ig"]
+[gd_scene load_steps=20 format=3 uid="uid://bf4yfagx3j8ig"]
 
 [ext_resource type="Material" uid="uid://6bupf22q674l" path="res://materials/Floor.tres" id="1_40t2g"]
 [ext_resource type="Script" path="res://scripts/musica.gd" id="1_mxxga"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dln885hpaf6kj" path="res://scenes/Shop.tscn" id="12_31gjg"]
 [ext_resource type="AudioStream" uid="uid://bjllxkat5exsf" path="res://audio/fracas.mp3" id="12_lt31s"]
 [ext_resource type="PackedScene" uid="uid://djumd75k74wpe" path="res://scenes/stats.tscn" id="13_f337m"]
+[ext_resource type="PackedScene" uid="uid://bqtl3aco2gnag" path="res://scenes/next_day.tscn" id="16_qqotx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rabrb"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -119,3 +120,5 @@ script = ExtResource("9_6o0aa")
 [node name="Shop" parent="." instance=ExtResource("12_31gjg")]
 
 [node name="Stats" parent="." instance=ExtResource("13_f337m")]
+
+[node name="NextDay" parent="." instance=ExtResource("16_qqotx")]
