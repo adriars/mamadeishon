@@ -13,4 +13,7 @@ func _on_head_pressed() -> void:
 		GymBro.pecs.condition += 4
 		GymBro.pecs.soreness += 15
 		GymBro.energy -= 25
+			$"../../AudioExit".play()
+	else:
+		$"../../AudioFail".play()
 	pass # Replace with function body.

@@ -13,4 +13,7 @@ func _on_back_pressed() -> void:
 		GymBro.back.condition += 4
 		GymBro.back.soreness += 15
 		GymBro.energy -= 25
+			$"../../AudioExit".play()
+	else:
+		$"../../AudioFail".play()
 	pass # Replace with function body.
