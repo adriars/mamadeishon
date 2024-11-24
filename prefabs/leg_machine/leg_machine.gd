@@ -13,4 +13,7 @@ func _on_leg_pressed() -> void:
 		GymBro.legs.condition += 4
 		GymBro.legs.soreness += 15
 		GymBro.energy -= 25
+		$"../../AudioExit".play()
+	else:
+		$"../../AudioFail".play()
 	pass # Replace with function body.

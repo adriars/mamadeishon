@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dln885hpaf6kj"]
+[gd_scene load_steps=3 format=3 uid="uid://dln885hpaf6kj"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_sioke"]
+[ext_resource type="AudioStream" uid="uid://bwjenex3ixlq1" path="res://audio/cash.mp3" id="2_ptasl"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -30,6 +31,10 @@ layout_mode = 2
 
 [node name="ChickenRice" type="Button" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
+
+[node name="AudioCash" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_ptasl")
+volume_db = 28.07
 
 [connection signal="pressed" from="VBoxContainer/GridContainer/Hamburger" to="." method="_on_hamburger_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/PreWorkout" to="." method="_on_pre_workout_pressed"]

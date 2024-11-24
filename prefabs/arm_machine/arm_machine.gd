@@ -12,4 +12,7 @@ func _on_biceps_pressed() -> void:
 		GymBro.arms.condition += 5 - GymBro.arms.soreness
 		GymBro.arms.soreness += 0.5
 		GymBro.energy -= 15
+		$"../../AudioExit".play()
+	else:
+		$"../../AudioFail".play()
 	pass # Replace with function body.
