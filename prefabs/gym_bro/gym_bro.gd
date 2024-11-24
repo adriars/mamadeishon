@@ -10,6 +10,7 @@ var back: BodyPart = BodyPart.new("Back")
 var legs: BodyPart = BodyPart.new("Legs")
 var booty: BodyPart = BodyPart.new("Booty")
 var pecs: BodyPart = BodyPart.new("Pecs")
+var challange: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

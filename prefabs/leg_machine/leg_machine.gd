@@ -10,7 +10,7 @@ func _on_close_pressed() -> void:
 func _on_leg_pressed() -> void:
 	#GymBro.leg.training()
 	if GymBro.energy >= 25:
-		GymBro.legs.condition += 4-(GymBro.legs.soreness)
+		GymBro.legs.condition += 4- clampi(GymBro.pecs.soreness, 0, 4)
 		GymBro.legs.soreness += 1
 		GymBro.energy -= 25
 		$"../../AudioExit".play()

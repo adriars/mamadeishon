@@ -42,7 +42,7 @@ layout_mode = 2
 [node name="Booty" type="Button" parent="Control/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Booty
-Energy: 25
+Energy: 20
 Conditioning: 4"
 
 [node name="Close" type="Button" parent="Control/CenterContainer/VBoxContainer"]

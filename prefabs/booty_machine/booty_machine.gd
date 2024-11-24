@@ -9,10 +9,10 @@ func _on_close_pressed() -> void:
 
 func _on_booty_pressed() -> void:
 	#GymBro.booty.training()
-	if GymBro.energy >= 25:
+	if GymBro.energy >= 20:
 		GymBro.booty.condition += 4-(GymBro.booty.soreness)
 		GymBro.booty.soreness += 1
-		GymBro.energy -= 25
+		GymBro.energy -= 20
 		$"../../AudioExit".play()
 	else:
 		$"../../AudioFail".play()
