@@ -7,10 +7,10 @@ func _on_close_pressed() -> void:
 	$Control.visible = false
 	pass # Replace with function body.
 
-func _on_back_pressed() -> void:
-	GymBro.back.training()
+func _on_booty_pressed() -> void:
+	GymBro.booty.training()
 	if GymBro.energy >= 25:
-		GymBro.back.condition += 4
-		GymBro.back.soreness += 15
+		GymBro.booty.condition += 4
+		GymBro.booty.soreness += 15
 		GymBro.energy -= 25
 	pass # Replace with function body.

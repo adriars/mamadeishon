@@ -1,10 +1,19 @@
-[gd_scene format=3 uid="uid://bf4yfagx3j8ig"]
+[gd_scene load_steps=8 format=3 uid="uid://bf4yfagx3j8ig"]
+
+[ext_resource type="Script" path="res://scripts/musica.gd" id="1_mxxga"]
+[ext_resource type="PackedScene" uid="uid://clof8jyh04t01" path="res://prefabs/arm_machine/arm_machine.tscn" id="1_p2t87"]
+[ext_resource type="PackedScene" uid="uid://b1m6qm3vb531s" path="res://prefabs/back_machine/back_machine.tscn" id="2_jhwoi"]
+[ext_resource type="PackedScene" uid="uid://mtb43mcmmoq2" path="res://prefabs/booty_machine/booty_machine.tscn" id="3_i7a31"]
+[ext_resource type="PackedScene" uid="uid://csuqypb0p2u8r" path="res://prefabs/head_machine/head_machine.tscn" id="5_8t8x8"]
+[ext_resource type="PackedScene" uid="uid://dj22ydg0l2s63" path="res://prefabs/leg_machine/leg_machine.tscn" id="7_b5v21"]
+[ext_resource type="AudioStream" uid="uid://btfh40o52px8g" path="res://audio/Temarron gymbros.mp3" id="7_gt1kl"]
 
 [node name="Gym" type="Node3D"]
 
 [node name="Suelo" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 size = Vector3(100, 1, 100)
+script = ExtResource("1_mxxga")
 
 [node name="Entrada" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4135, 6.34418, -23.2245)
@@ -13,66 +22,22 @@ size = Vector3(1, 13.6884, 9.23438)
 [node name="machines" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212303, -0.0974007, -0.121502)
 
-[node name="quadri8" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1805, 6.34418, -5.82327)
-size = Vector3(8.60632, 13.6884, 9.82568)
+[node name="ArmMachine" parent="machines" instance=ExtResource("1_p2t87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212303, 0.0974007, 0.121502)
 
-[node name="quadri9" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2461, 6.38778, -6.0421)
-size = Vector3(8.60632, 13.6884, 9.82568)
+[node name="BackMachine" parent="machines" instance=ExtResource("2_jhwoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1651, 0.0974007, 0.0544835)
 
-[node name="quadri10" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8662, 6.344, -5.72009)
-size = Vector3(8.60632, 13.6884, 9.82568)
+[node name="Booty_Machine" parent="machines" instance=ExtResource("3_i7a31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89061, 0.356558, 6.98936)
 
-[node name="quadri11" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5352, 6.42064, -5.62177)
-size = Vector3(8.60632, 13.6884, 9.82568)
+[node name="Head_Machine" parent="machines" instance=ExtResource("5_8t8x8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2346, 0.399746, 6.8485)
 
-[node name="quadri15" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50546, 6.27588, -5.64826)
-size = Vector3(8.60632, 13.6884, 9.82568)
+[node name="Leg_Machine" parent="machines" instance=ExtResource("7_b5v21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.30619, -0.0687446, 7.22859)
 
-[node name="calbs2" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8237, 6.344, 44.8326)
-size = Vector3(8.60632, 13.6884, 9.82568)
-
-[node name="quadri2" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0424, 6.344, 44.6158)
-size = Vector3(8.60632, 13.6884, 9.82568)
-
-[node name="squat2" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0187, 6.30029, 44.206)
-size = Vector3(21.7314, 13.6884, 9.82568)
-
-[node name="Squat2" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8334, 6.344, 44.0158)
-size = Vector3(27.4399, 13.6884, 9.82568)
-
-[node name="calbs3" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5782, 6.344, 45.1264)
-size = Vector3(8.60632, 13.6884, 9.82568)
-
-[node name="calbs4" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8237, 6.344, -44.0988)
-size = Vector3(8.60632, 13.6884, 9.82568)
-
-[node name="quadri3" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0424, 6.344, -44.3156)
-size = Vector3(8.60632, 13.6884, 9.82568)
-
-[node name="isquios3" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7389, 6.344, -44.5324)
-size = Vector3(8.60632, 13.6884, 9.82568)
-
-[node name="squat3" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5202, 6.344, -44.7492)
-size = Vector3(8.60632, 13.6884, 9.82568)
-
-[node name="Squat3" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1209, 6.344, -44.9232)
-size = Vector3(19.0244, 13.6884, 9.82568)
-
-[node name="calbs5" type="CSGBox3D" parent="machines"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5782, 6.344, -43.8049)
-size = Vector3(8.60632, 13.6884, 9.82568)
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_gt1kl")
+volume_db = 22.456
+autoplay = true
