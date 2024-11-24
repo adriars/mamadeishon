@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvnw01udfqm18"]
+
+[ext_resource type="PackedScene" uid="uid://dr5pvsblamvjp" path="res://glbs/Arm_Machine.gltf" id="1_qc205"]
+[ext_resource type="Material" uid="uid://7xr0jt6k1wa2" path="res://materials/Plastic negre.tres" id="2_k8hh0"]
+[ext_resource type="Material" uid="uid://h13ecx3h4p03" path="res://materials/Ferro.tres" id="3_vtpln"]
+
+[node name="Arm_Machine" instance=ExtResource("1_qc205")]
+
+[node name="Estand" parent="." index="0"]
+material_override = ExtResource("2_k8hh0")
+
+[node name="Mancuerna" parent="Estand" index="0"]
+material_override = ExtResource("3_vtpln")
+
+[node name="Mancuerna_001" parent="Estand" index="1"]
+material_override = ExtResource("3_vtpln")
+
+[node name="Mancuerna_002" parent="Estand" index="2"]
+material_override = ExtResource("3_vtpln")
+
+[node name="Mancuerna_003" parent="Estand" index="3"]
+material_override = ExtResource("3_vtpln")

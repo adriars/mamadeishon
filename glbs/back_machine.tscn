@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3fa7ba345pps"]
+
+[ext_resource type="PackedScene" uid="uid://cnkdwqvjl040b" path="res://glbs/Back_Machine.gltf" id="1_ow4xw"]
+[ext_resource type="Material" uid="uid://h13ecx3h4p03" path="res://materials/Ferro.tres" id="2_8k2wf"]
+
+[node name="Back_Machine" instance=ExtResource("1_ow4xw")]
+
+[node name="Arm_Machine" parent="." index="0"]
+material_override = ExtResource("2_8k2wf")

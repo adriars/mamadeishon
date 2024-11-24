@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://rl2yylb8wrkb"]
+
+[ext_resource type="PackedScene" uid="uid://dvqf8p3ri12cp" path="res://glbs/Leg_Machine.gltf" id="1_futvc"]
+[ext_resource type="Material" uid="uid://h13ecx3h4p03" path="res://materials/Ferro.tres" id="2_1k8nm"]
+
+[node name="Leg_Machine2" instance=ExtResource("1_futvc")]
+
+[node name="Leg_Machine" parent="." index="0"]
+material_override = ExtResource("2_1k8nm")

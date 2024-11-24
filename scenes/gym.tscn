@@ -1,58 +1,102 @@
-[gd_scene load_steps=8 format=3 uid="uid://bf4yfagx3j8ig"]
+[gd_scene load_steps=15 format=3 uid="uid://bf4yfagx3j8ig"]
 
+[ext_resource type="Material" uid="uid://6bupf22q674l" path="res://materials/Floor.tres" id="1_40t2g"]
 [ext_resource type="Script" path="res://scripts/musica.gd" id="1_mxxga"]
 [ext_resource type="PackedScene" uid="uid://clof8jyh04t01" path="res://prefabs/arm_machine/arm_machine.tscn" id="1_p2t87"]
 [ext_resource type="PackedScene" uid="uid://b1m6qm3vb531s" path="res://prefabs/back_machine/back_machine.tscn" id="2_jhwoi"]
+[ext_resource type="Material" uid="uid://dapxho1km5e3g" path="res://materials/Wall.tres" id="3_2x4vj"]
 [ext_resource type="PackedScene" uid="uid://mtb43mcmmoq2" path="res://prefabs/booty_machine/booty_machine.tscn" id="3_i7a31"]
+[ext_resource type="Material" uid="uid://b70b0qcdn3d56" path="res://materials/Porta.tres" id="4_w404s"]
 [ext_resource type="PackedScene" uid="uid://csuqypb0p2u8r" path="res://prefabs/head_machine/head_machine.tscn" id="5_8t8x8"]
 [ext_resource type="PackedScene" uid="uid://dj22ydg0l2s63" path="res://prefabs/leg_machine/leg_machine.tscn" id="7_b5v21"]
 [ext_resource type="AudioStream" uid="uid://btfh40o52px8g" path="res://audio/Temarron gymbros.mp3" id="7_gt1kl"]
+[ext_resource type="Script" path="res://scenes/main_camera.gd" id="9_6o0aa"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rabrb"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ki1xx"]
+sky_material = SubResource("ProceduralSkyMaterial_rabrb")
+
+[sub_resource type="Environment" id="Environment_tjv8h"]
+background_mode = 2
+sky = SubResource("Sky_ki1xx")
+tonemap_mode = 2
 
 [node name="Gym" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tjv8h")
+
 [node name="Suelo" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0274162, -1.05868, 0.0216122)
 size = Vector3(100, 1, 100)
+material = ExtResource("1_40t2g")
 script = ExtResource("1_mxxga")
 
 [node name="Paret entrada" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -50.5147, 14.4576, 0)
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -50.5147, 14.4576, -0.616547)
 size = Vector3(30, 1, 100)
+material = ExtResource("3_2x4vj")
+script = ExtResource("1_mxxga")
+
+[node name="Paret entrada2" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -49.6807, 9.6566, -35.8389)
+size = Vector3(20.7706, 1, 10.1309)
+material = ExtResource("4_w404s")
 script = ExtResource("1_mxxga")
 
 [node name="Paret fondo" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 0.0345993, 14.4223, -50.5895)
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, -0.199895, 14.4223, -50.6957)
 size = Vector3(30, 1, 100)
+material = ExtResource("3_2x4vj")
 script = ExtResource("1_mxxga")
 
 [node name="machines" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212303, -0.0974007, -0.121502)
 
 [node name="ArmMachine" parent="machines" instance=ExtResource("1_p2t87")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212303, 0.0974007, 0.121502)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2053, -0.381442, -47.6651)
+
+[node name="ArmMachine2" parent="machines" instance=ExtResource("1_p2t87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.49486, -0.381442, -47.6651)
 
 [node name="BackMachine" parent="machines" instance=ExtResource("2_jhwoi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1651, 0.0974007, 0.0544835)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.9627, -0.376502, -11.4613)
+
+[node name="BackMachine2" parent="machines" instance=ExtResource("2_jhwoi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.9627, -0.376502, -1.69563)
 
 [node name="Booty_Machine" parent="machines" instance=ExtResource("3_i7a31")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89061, 0.356558, 6.98936)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.2566, -0.376912, -7.85228)
+
+[node name="Booty_Machine2" parent="machines" instance=ExtResource("3_i7a31")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.2566, -0.376912, -17.822)
 
 [node name="Head_Machine" parent="machines" instance=ExtResource("5_8t8x8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2346, 0.399746, 6.8485)
+transform = Transform3D(1.51961, 0, 0, 0, 1.51961, 0, 0, 0, 1.51961, -22.8352, -0.393579, -47.9157)
 
 [node name="Leg_Machine" parent="machines" instance=ExtResource("7_b5v21")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.30619, -0.0687446, 7.22859)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.23676, -0.394762, -8.88442)
+
+[node name="Leg_Machine2" parent="machines" instance=ExtResource("7_b5v21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49298, -0.394762, -8.88442)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("7_gt1kl")
 volume_db = 22.456
 autoplay = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.702886, 0, 0.711303, 0, 1, 0, -0.711303, 0, 0.702886, 49.9826, 11.4631, 49.9901)
-
 [node name="Lights" type="Node" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(0, 1, 0, 4.37114e-08, 0, 1, 1, 0, -4.37114e-08, 1.4201, 57.556, -11.4266)
 light_angular_distance = 30.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.708613, -0.181925, 0.681741, -0.0027509, 0.96547, 0.260498, -0.705592, -0.186468, 0.683645, 14.192, 21.0855, 13.1216)
+projection = 1
+fov = 39.3
+size = 46.723
+script = ExtResource("9_6o0aa")

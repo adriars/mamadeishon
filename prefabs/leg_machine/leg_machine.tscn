@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj22ydg0l2s63"]
 
-[ext_resource type="PackedScene" uid="uid://dvqf8p3ri12cp" path="res://glbs/Leg_Machine.gltf" id="1_38mh3"]
 [ext_resource type="Script" path="res://prefabs/leg_machine/leg_machine.gd" id="1_p7jru"]
+[ext_resource type="PackedScene" uid="uid://rl2yylb8wrkb" path="res://glbs/leg_machine.tscn" id="2_02q1m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5nli"]
 size = Vector3(3.51343, 8.07745, 8.59177)
@@ -13,5 +13,5 @@ script = ExtResource("1_p7jru")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.0114, 3.88228)
 shape = SubResource("BoxShape3D_v5nli")
 
-[node name="Leg_Machine2" parent="." instance=ExtResource("1_38mh3")]
+[node name="Leg_Machine3" parent="." instance=ExtResource("2_02q1m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0749927, 0, 0)
